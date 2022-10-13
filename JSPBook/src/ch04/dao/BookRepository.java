@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch04.vo.BookVO;
+import java.lang.NullPointerException;
+import java.lang.ArrayIndexOutOfBoundsException;
+import java.lang.NumberFormatException;
 
 
 public class BookRepository {

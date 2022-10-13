@@ -3,9 +3,10 @@
 <%@page import="ch04.vo.BookVO"%>
 <%@page import="ch04.dao.BookRepository"%>
 <%@ page import="java.util.List"%>
+<%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <%
-	String id = request.getParameter("id");
+	String id = request.getParameter("id").toString(); //수정
 
 	BookRepository bookRepository = BookRepository.getInstance();
 	BookVO bookVO = bookRepository.getBookById(id);
@@ -47,7 +48,7 @@
 				<h4>${bookVO.unitPrice}원</h4>
 				<p>
 					<a href="#" class="btn btn-info">상품주문&raquo;</a>
-					<a href="../ch04/products.jsp" class="btn btn-secondary">상품목록&raquo;</a>
+					<a href="books.jsp" class="btn btn-secondary">상품목록&raquo;</a>
 				</p>
 			</div>
 		</div>
