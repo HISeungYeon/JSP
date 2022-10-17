@@ -21,6 +21,23 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>상품 상세 정보</title>
+<script type="text/javascript">
+
+function addToCart(){
+	let result = confirm("상품을 장바구니에 추가하시겠습니까?");
+	
+	if(result){
+		console.log("true");
+		document.addForm.submit();
+	}else{
+		console.log("false");
+		//초기화!
+		document.addForm.reset();
+	}
+	
+}
+
+</script>
 </head>
 <body>
 	
@@ -52,10 +69,11 @@
 				<p><b><fmt:message key="category" /> </b> : ${productVO.category}</p>
 				<p><b><fmt:message key="unitsInStock" /> </b> : ${productVO.unitsInStock}</p>
 				<h4>${productVO.unitPrice}원</h4>
-				<p>
-					<a href="#" class="btn btn-info"><fmt:message key='productOrder' />&raquo;</a>
+				<form name="addForm" action="addCart.jsp?id=${productVO.productId}" method="post">
+					<a href="#" class="btn btn-info" onclick="addToCart()"><fmt:message key='productOrder' />&raquo;</a>
+					<a href="cart.jsp" class="btn btn-warning">장바구니&raquo;</a>
 					<a href="products.jsp" class="btn btn-secondary"><fmt:message key='productList' />&raquo;</a>
-				</p>
+				</form>
 			</div>
 		</div>
 	</div>

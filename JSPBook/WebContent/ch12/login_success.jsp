@@ -10,6 +10,7 @@
 	String id = request.getParameter("id");
 %>
 
+<img src="../resources/images/문당운.jpg">
 <p><%=id %>님 로그인을 성공했습니다</p>
 </body>
 </html>

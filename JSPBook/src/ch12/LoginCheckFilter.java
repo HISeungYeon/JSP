@@ -47,7 +47,7 @@ public class LoginCheckFilter implements Filter{
 		System.out.println(id.equals(paramId)&& pw.equals(paramPw));
 		
 		if(id.equals(paramId)&& pw.equals(paramPw)) {
-			msg = "로그인 성공 ㅇㅁㅇ";
+			msg = "로그인 성공";
 		}else {
 			msg = "로그인 실패";
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/ch12/loginForm.jsp");
