@@ -16,6 +16,22 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>도서 상세 정보</title>
+<script type="text/javascript">
+
+function addCart(){
+	let result = confirm("도서를 장바구니에 추가할까욤??");
+	
+	if(result){
+		console.log("true");
+		document.addForm.submit();
+	}else{
+		console.log("false");
+		document.addForm.reset();
+	}
+	
+}
+
+</script>
 </head>
 <body>
 	<!-- 머리글에 해당하는 munu.jsp 파일의 내용을 포함하도록 include액션 태그 작성 -->
@@ -46,10 +62,11 @@
 				<p><b>분류</b> : ${bookVO.category}</p>
 				<p><b>재고 수</b> : ${bookVO.unitsInStock}</p>
 				<h4>${bookVO.unitPrice}원</h4>
-				<p>
-					<a href="#" class="btn btn-info">상품주문&raquo;</a>
+				<form name="addForm" action="addCart.jsp?id=${bookVO.bookId}" method="post">
+					<a href="#" class="btn btn-info" onclick="addCart()">상품주문&raquo;</a>
+					<a href="cart.jsp" class="btn btn-warning">장바구니&raquo;</a>
 					<a href="books.jsp" class="btn btn-secondary">상품목록&raquo;</a>
-				</p>
+				</form>
 			</div>
 		</div>
 	</div>

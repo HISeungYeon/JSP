@@ -16,6 +16,6 @@
 		out.println("userPW : " + user_pw);
 	%>
 	
-	<p><%=application.getAttribute("id")%></p>
+	<p><%=application.getAttribute("user_id")%></p>
 </body>
 </html>

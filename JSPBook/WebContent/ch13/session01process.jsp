@@ -15,9 +15,6 @@
 			//user_id 변수에 들어있는 값 admin이 setting이 됨.
 			session.setAttribute("userID", user_id);
 			session.setAttribute("userPW", user_pw);
-			out.println("세션 설정 성공");
-			out.println(user_id + "님 환영합니다");
-			out.println("<a href='session02.jsp'>세션확인</a>");
 		}else{
 			out.println("세션 설정 실패");
 		}

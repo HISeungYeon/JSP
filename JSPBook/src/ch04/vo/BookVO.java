@@ -16,6 +16,7 @@ public class BookVO implements Serializable {
     private String releaseDate;//출판일(월/년)
     private String condition; //신상품 중고품 재생품 
   	private String filename; //이미지 파일명 
+	private int quantity; //장바구니에 상품을 담은 개수
 	
     public BookVO() {}
 
@@ -120,14 +121,24 @@ public class BookVO implements Serializable {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
+	
+  	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
 	@Override
 	public String toString() {
 		return "BookVO [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", description="
 				+ description + ", author=" + author + ", publisher=" + publisher + ", category=" + category
 				+ ", unitsInStock=" + unitsInStock + ", totalPages=" + totalPages + ", releaseDate=" + releaseDate
-				+ ", condition=" + condition + ", filename=" + filename + "]";
+				+ ", condition=" + condition + ", filename=" + filename + ", quantity=" + quantity + "]";
 	}
+
+
 
 	
 	

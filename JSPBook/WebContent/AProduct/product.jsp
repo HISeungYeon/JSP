@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <%//스크립틀릿 태그 
 
-	String id = request.getParameter("id").toString();
+	String id = request.getParameter("id");
 
 	ProductRepository productRepository = ProductRepository.getInstance();
 	//상세보기 => 1행(ProductVO)을 리턴
