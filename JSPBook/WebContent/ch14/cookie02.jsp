@@ -10,7 +10,7 @@
 	//모든 쿠키 정보를 가져와보쟈 요청 시 쿠키도 함께 전달 됨
 	Cookie[] cookies = request.getCookies();
 
-	//현재 설정도니 쿠키의 개수?
+	//현재 설정된 쿠키의 개수?
 	out.print("현재 설정된 쿠키의 개수 : " + cookies.length + "<br />");
 	out.print("<hr />");
 	
